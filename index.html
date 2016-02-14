@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Playing with Flex box</title>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<main class="wrapper">
+    <div>
+        <header>
+            <h1>Flexbox</h1>
+        </header>
+        <p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank">Using CSS flexible boxes - MDN</a></li>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox - CSS Tricks</a></li>
+        </ul>
+        </p>
+        <section>
+            <header>
+                <h2>Multicolumn layout</h2>
+                <h3>Column width example</h3>
+            </header>
+            <p>In this example <code>column-width</code> have been set as 200px width.</p>
+            <p>The browser will fit as many as columns into the container as posible, using the specfied width as ideal width.</p>
+            <p>The specification says:
+            <blockquote>
+                describes the optimal column width. The actual column width may be wider (to fill the available space), or narrower (only if the available space is smaller than the specified column width). Specified values must be greater than 0.
+            </blockquote>
+            </p>
+            <ul class="column-width">
+                <li><a href="#" class="tag">ipsum</a></li>
+                <li><a href="#" class="tag">dolor</a></li>
+                <li><a href="#" class="tag">sit amet</a></li>
+                <li><a href="#" class="tag">consectetuer</a></li>
+                <li><a href="#" class="tag">adipiscing</a></li>
+                <li><a href="#" class="tag">elit</a></li>
+                <li><a href="#" class="tag">aliquam</a></li>
+                <li><a href="#" class="tag">tincidunt</a></li>
+                <li><a href="#" class="tag">mauris</a></li>
+                <li><a href="#" class="tag">eu risu</a></li>
+                <li><a href="#" class="tag">vestibulum</a></li>
+                <li><a href="#" class="tag">auctor</a></li>
+                <li><a href="#" class="tag">dapibus neque</a></li>
+                <li><a href="#" class="tag">vulputate</a></li>
+                <li><a href="#" class="tag">turpis</a></li>
+                <li><a href="#" class="tag">duis</a></li>
+                <li><a href="#" class="tag">ornare</a></li>
+                <li><a href="#" class="tag">lacus</a></li>
+                <li><a href="#" class="tag">magna</a></li>
+                <li><a href="#" class="tag">vitae</a></li>
+                <li><a href="#" class="tag">tincidunt</a></li>
+                <li><a href="#" class="tag">leo</a></li>
+                <li><a href="#" class="tag">elementum</a></li>
+                <li><a href="#" class="tag">sed posuere</a></li>
+                <li><a href="#" class="tag">metus</a></li>
+                <li><a href="#" class="tag">pellentesque</a></li>
+                <li><a href="#" class="tag">mattis</a></li>
+            </ul>
+        </section>
+        <section>
+            <header>
+                <h3>Column count</h3>
+            </header>
+            <p>If you specify how many columns you want then the browser decide how wide the should be. In this example
+                <code>column-count</code> is setted as 3.</p>
+            <p>The specification says:
+            <blockquote>
+                describes the optimal number of columns into which the content of the element will be flowed. Values must be greater than 0. If both ‘column-width’ and ‘column-count’ have non-auto values, the integer value describes the maximum number of columns.
+            </blockquote>
+            </p>
+            <ul class="column-count">
+                <ul class="column-width">
+                    <li><a href="#" class="tag">ipsum</a></li>
+                    <li><a href="#" class="tag">dolor</a></li>
+                    <li><a href="#" class="tag">sit amet</a></li>
+                    <li><a href="#" class="tag">consectetuer</a></li>
+                    <li><a href="#" class="tag">adipiscing</a></li>
+                    <li><a href="#" class="tag">elit</a></li>
+                    <li><a href="#" class="tag">aliquam</a></li>
+                    <li><a href="#" class="tag">tincidunt</a></li>
+                    <li><a href="#" class="tag">mauris</a></li>
+                    <li><a href="#" class="tag">eu risu</a></li>
+                    <li><a href="#" class="tag">vestibulum</a></li>
+                    <li><a href="#" class="tag">auctor</a></li>
+                    <li><a href="#" class="tag">dapibus neque</a></li>
+                    <li><a href="#" class="tag">vulputate</a></li>
+                    <li><a href="#" class="tag">turpis</a></li>
+                    <li><a href="#" class="tag">duis</a></li>
+                    <li><a href="#" class="tag">ornare</a></li>
+                    <li><a href="#" class="tag">lacus</a></li>
+                    <li><a href="#" class="tag">magna</a></li>
+                    <li><a href="#" class="tag">vitae</a></li>
+                    <li><a href="#" class="tag">tincidunt</a></li>
+                    <li><a href="#" class="tag">leo</a></li>
+                    <li><a href="#" class="tag">elementum</a></li>
+                    <li><a href="#" class="tag">sed posuere</a></li>
+                    <li><a href="#" class="tag">metus</a></li>
+                    <li><a href="#" class="tag">pellentesque</a></li>
+                    <li><a href="#" class="tag">mattis</a></li>
+                </ul>
+            </ul>
+        </section>
+    </div>
+</main>
+
+<link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+</body>
+</html>
