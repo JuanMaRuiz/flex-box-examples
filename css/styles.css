@@ -80,16 +80,45 @@ code {
 
 .content-submenu {
     color: #fff;
-    padding: 15px;
     text-align: center;
     background-color: #3E4651;
+    -moz-display: flex;
+    -webkit-display: flex;
+    display: flex;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    transition-property: background-color, color;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
 }
 .content-submenu a {
     color: #fff;
     text-decoration: none;
-    border-bottom: 1px dotted #fff;
+    padding: 15px;
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: none;
 }
 
+.content-submenu li {
+
+
+}
+
+.content-submenu li:hover a {
+    color: #3E4651;
+    /*transition-property: background-color, color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;*/
+}
+.content-submenu li:hover {
+    color: #3E4651;
+    background-color: #fff;
+    transition-property: background-color, color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
 
 /* $Examples */
 .example {
