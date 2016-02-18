@@ -1,0 +1,25 @@
+{
+  "name": "flex-box-examples",
+  "version": "1.0.0",
+  "description": "Basic usage of CSS3 Flex box",
+  "main": "index.js",
+  "scripts": {
+    "test": "a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanMaRuiz/flex-box-examples.git"
+  },
+  "keywords": [
+    "flex-box"
+  ],
+  "author": "JuanMa Ruiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuanMaRuiz/flex-box-examples/issues"
+  },
+  "homepage": "https://github.com/JuanMaRuiz/flex-box-examples#readme",
+  "devDependencies": {
+    "grunt-sass": "^1.1.0"
+  }
+}
