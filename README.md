@@ -10,31 +10,24 @@
 Sass structure is based on [10up Engineering-Best-Practices](https://10up.github.io/Engineering-Best-Practices/structure/)
 
 ```
-|- assets/css/scss/
+|- assets/scss/
 |  |- global/ ____________________________ # Functions, mixins, placeholders, and variables
 |  |- base/
 |    |- reset, normalize, or sanitize
 |    |- typography
 |    |- icons
-|    |- wordpress ________________________ # Partial for WordPress default classes
 |  |- components/
 |    |- buttons
-|    |- callouts
+|    |- info-boxes
+|    |- callouts _________________________ # Not by the moment
 |    |- toggles
 |    |- all other modular reusable UI components
 |  |- layout/
-|    |- header
 |    |- footer
+|    |- header
 |    |- sidebar
 |  |- templates/
-|    |- home page
-|    |- single
-|    |- archives
 |    |- blog
+|    |- portfolio
 |    |- all page, post, and custom post type specific styles
-|  |- admin/ _____________________________ # Admin specific partials
-|  |- editor/ ____________________________ # Editor specific partials (leverage placeholders to use in front-end and admin area)
-|  |- admin.scss
-|  |- project.scss
-|  |- editor-styles.scss
 ```
