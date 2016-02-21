@@ -9,7 +9,7 @@
 
 Sass structure is based on [10up Engineering-Best-Practices](https://10up.github.io/Engineering-Best-Practices/structure/)
 
-'''
+```
 |- assets/css/scss/
 |  |- global/ ____________________________ # Functions, mixins, placeholders, and variables
 |  |- base/
@@ -37,4 +37,4 @@ Sass structure is based on [10up Engineering-Best-Practices](https://10up.github
 |  |- admin.scss
 |  |- project.scss
 |  |- editor-styles.scss
-'''
+```
