@@ -1,0 +1,30 @@
+{
+  "name": "flex-box-examples",
+  "description": "Basic usage of CSS3 Flex box",
+  "main": "index.html",
+  "authors": [
+    "JuanMa Ruiz"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "flex-box"
+  ],
+  "homepage": "https://github.com/JuanMaRuiz/flex-box-examples",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0"
+  }
+}

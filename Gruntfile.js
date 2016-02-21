@@ -2,6 +2,18 @@
     'use strict';
     //Project configuration
     module.exports = function(grunt) {
+
+    // require it at the top and pass in the grunt instance
+
+    // Time how long task take. Can help when optimizing build times
+    require('time-grunt')(grunt);
+    /*
+     * A JIT(Just In Time) plugin loader for Grunt.
+     * Load time of Grunt does not slow down even if there are many plugins.
+     * https://www.npmjs.com/package/jit-grunt
+     */
+    require('jit-grunt')(grunt);
+
         grunt.initConfig({
             pkg: grunt.file.readJSON('package.json'),
             sass: {
@@ -68,14 +80,6 @@
             }
         });
 
-        // Load plugins
-        grunt.loadNpmTasks('grunt-sass');
-        grunt.loadNpmTasks('grunt-contrib-clean');
-        grunt.loadNpmTasks('grunt-contrib-connect');
-        grunt.loadNpmTasks('grunt-contrib-copy');
-        grunt.loadNpmTasks('grunt-contrib-watch');
-        grunt.loadNpmTasks('grunt-contrib-cssmin');
-
         // Tasks
         grunt.registerTask('build',[
             'clean',
@@ -83,6 +87,6 @@
             'cssmin',
             'copy'
         ]);
-        grunt.registerTask('default', ['build', 'connect:dist', 'sass']);
+        grunt.registerTask('default', ['build', 'connect:dist', 'watch']);
     }
 })()
