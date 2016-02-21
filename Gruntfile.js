@@ -83,6 +83,6 @@
             'cssmin',
             'copy'
         ]);
-        grunt.registerTask('default', [ 'build', 'connect:dist', 'sass', ]);
+        grunt.registerTask('default', ['build', 'connect:dist', 'sass']);
     }
 })()
