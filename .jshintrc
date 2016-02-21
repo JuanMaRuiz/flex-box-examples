@@ -1,0 +1,24 @@
+{
+"strict": false,              // true: Requires all functions run in ES5 Strict Mode
+    "globalstrict"  : false,  // true: Allow global "use strict" (also enables 'strict')
+    "maxerr": 1,              // {int} Maximum error before stopping
+    "curly": true,            // true: Require {} for every new block or scope
+    "eqnull": true,           // true: Tolerate use of `== null`
+    "eqeqeq": true,           // true: Require triple equals (===) for comparison
+    "undef": true,            // true: Require all non-global variables to be declared (prevents global leaks)
+    "devel": true,            // For allow console in dev profile (Set to false in prod enviroment)
+    "browser": true,          // Web Browser (window, document, etc)
+    "debug": false,           // true: Allow debugger statements e.g. browser breakpoints.
+    "nonew": false,           // true: Prohibit use of constructors for side-effects (without assignment)
+    "plusplus": false,        // true: Prohibit use of `++` & `--`
+    "globals": {
+        "sslp": false,        // Allow angular app name
+        "module": false,
+        "define": false,
+        "require": false,
+        "angular": false,
+        "_gaq": false,
+        "domainName": false,
+        "destination": false
+    }
+}

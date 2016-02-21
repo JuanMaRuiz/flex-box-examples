@@ -28,12 +28,17 @@
                     }
                 }
             },
-            copy: {
-                dist: {
-                    src: ['*.html', '!assests/**/*.css', '!assests/**/*.js'],
-                    dest: 'dist',
-                    expand: true
-                    
+            // Make sure code styles are up to par and there are no obvious mistakes
+            jshint: {
+                options: {
+                    jshintrc: '.jshintrc',
+                    reporter: require('jshint-stylish')
+                },
+                all: {
+                    src: [
+                        'Gruntfile.js',
+                        'assests/js/{,*/}*.js'
+                    ]
                 }
             },
             watch: {
@@ -41,6 +46,14 @@
                 tasks: ['sass', 'cssmin'],
                 options: {
                     livereload: true
+                }
+            },
+            copy: {
+                dist: {
+                    src: ['*.html', '!assests/**/*.css', '!assests/**/*.js'],
+                    dest: 'dist',
+                    expand: true
+                    
                 }
             },
             cssmin: {
@@ -83,10 +96,11 @@
         // Tasks
         grunt.registerTask('build',[
             'clean',
+            'jshint',
             'sass',
             'cssmin',
             'copy'
         ]);
         grunt.registerTask('default', ['build', 'connect:dist', 'watch']);
-    }
-})()
+    };
+})();
