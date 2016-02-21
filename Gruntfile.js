@@ -50,10 +50,17 @@
             },
             copy: {
                 dist: {
-                    src: ['*.html', '!assests/**/*.css', '!assests/**/*.js'],
+                    src: ['*.html', '!assests/**/*.css', '!assests/**/*.js', 'bower_components/html5shiv/dist/html5shiv.min.js'],
                     dest: 'dist',
                     expand: true
                     
+                },
+                libs: {
+                    src: ['bower_components/html5shiv/dist/html5shiv.min.js'],
+                    dest: 'dist/js/libs/',
+                    expand: true,
+                    flatten: true, // expand: true and flatten: true to copy file without folders
+                    filter: 'isFile'
                 }
             },
             cssmin: {

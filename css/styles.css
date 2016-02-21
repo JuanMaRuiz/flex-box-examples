@@ -101,11 +101,6 @@ code {
     border-bottom: none;
 }
 
-.content-submenu li {
-
-
-}
-
 .content-submenu li:hover a {
     color: #3E4651;
     /*transition-property: background-color, color;
