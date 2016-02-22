@@ -42,7 +42,7 @@
                 }
             },
             watch: {
-                files: ['assests/scss/*.scss', 'assests/js/*.js'],
+                files: ['assests/scss/**/*.scss', 'assests/js/**/*.js'],
                 tasks: ['sass', 'cssmin'],
                 options: {
                     livereload: true
