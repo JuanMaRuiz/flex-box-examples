@@ -24,7 +24,7 @@
                 },
                 dist: {
                     files: {
-                        'dist/css/styles.css': 'assets/scss/main.scss'
+                        'dist/css/styles.css': 'app/assets/scss/main.scss'
                     }
                 }
             },
@@ -37,23 +37,73 @@
                 all: {
                     src: [
                         'Gruntfile.js',
-                        'assests/js/{,*/}*.js'
+                        'app/assests/js/{,*/}*.js'
                     ]
                 }
             },
-            watch: {
-                files: ['assests/scss/**/*.scss', 'assests/js/**/*.js'],
-                tasks: ['sass', 'cssmin'],
+            concat: {
                 options: {
-                    livereload: true
+                    separator: ';'
+                },
+                dist: {
+                    src: ['dist/min-safe/js/app.js'],
+                    dest: 'dist/js/app.min.js',
+                    nonull: true
+                }
+            },
+            uglify: {
+                options: {
+                  compress: {
+                    global_defs: {
+                      "DEBUG": false
+                    },
+                    dead_code: true
+                  }
+                },
+                dist: {
+                  files: {
+                    'dist/js/app.min.js': ['dist/js/app.min.js']
+                  }
+                }
+            },
+            ngAnnotate: {
+                options: {
+                    singleQuotes: true
+                },
+                app: {
+                    files: {
+                        'dist/min-safe/js/app.js': ['bower_components/angular/angular.js', 'bower_components/angular-ui-router/release/angular-ui-router.js', 'app/assets/js/app.js']
+                    },
+                }
+            },
+            watch: {
+                copy: {
+                    files: [ 'app/**', '!app/**/*.css', '!app/**/*.js'],
+                    tasks: ['build']                    
+                },
+                styles: {
+                    files: [ 'app/assets/scss/**/*.scss'],
+                    tasks: ['sass', 'cssmin']
+                },
+                js: {
+                    files: ['app/assets/js/{,*}*.js'],
+                    tasks: ['build']
+                },
+                livereload: {
+                    options: {
+                        livereload: '<%= connect.options.livereload %>'
+                    },
+                    files: [
+                        'app/{,*/}*.html'
+                    ]
                 }
             },
             copy: {
-                dist: {
-                    src: ['*.html', '!assests/**/*.css', '!assests/**/*.js', 'bower_components/html5shiv/dist/html5shiv.min.js'],
+                html: {
+                    cwd: 'app',
+                    src: ['*.html', 'views/*.html', '!styles/**/*.css', '!js/**/*.js'],
                     dest: 'dist',
-                    expand: true
-                    
+                    expand: true,
                 },
                 libs: {
                     src: ['bower_components/html5shiv/dist/html5shiv.min.js'],
@@ -61,6 +111,13 @@
                     expand: true,
                     flatten: true, // expand: true and flatten: true to copy file without folders
                     filter: 'isFile'
+                },
+                js: {
+                    cwd: 'app',
+                    src: ['js/{,*}*.js'],
+                    dest: 'dist/js/app.js',
+                    expand: true,
+                    flatten: true, // expand: true and flatten: true to copy file without folders 
                 }
             },
             cssmin: {
@@ -89,10 +146,10 @@
                 options: {
                   open: true,
                   base:{
-                       path: 'dist/',
-                    options: {
-                        index: 'index.html',
-                        maxAge: 300000
+                        path: 'dist/',
+                        options: {
+                            index: 'index.html',
+                            maxAge: 300000
                     }
                   }
                 }
@@ -106,8 +163,11 @@
             'jshint',
             'sass',
             'cssmin',
+            'ngAnnotate',
+            'concat',
+            'uglify',
             'copy'
         ]);
-        grunt.registerTask('default', ['build', 'connect:dist', 'watch']);
+            grunt.registerTask('default', ['build', 'connect:dist', 'watch']);
     };
 })();

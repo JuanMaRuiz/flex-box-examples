@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <title>Playing with Flex box</title>
 
@@ -10,13 +9,15 @@
     <script src="assets/js/lib/html5shiv.js"></script>
     <![endif]-->
 </head>
-<body>
+<body ng-app="flexbox">
 <main class="wrapper">
     <section>
+    <div ui-view="header"></div>
         <header>
             <h1>Flexbox</h1>
             <h2>Multicolumn layout</h2>
         </header>
+        <div ui-view="header"></div>
         <p>
         <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank">Using CSS flexible boxes - MDN</a></li>
@@ -247,10 +248,11 @@
                 <small>Remember use browser prefixes.</small>
             </p>
         </article>
-        <a href="/flexible-box-layout.html">CSS Flexible box layout -></a>
+        <a href="flexible-box-layout.html">CSS Flexible box layout -></a>
     </section>
 </main>
 
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+<script src="js/app.min.js"></script>
 </body>
 </html>
