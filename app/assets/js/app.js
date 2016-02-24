@@ -8,18 +8,43 @@
 				.state('app',{
 					url: '/',
 					views: {
-						'header': {
-							templateUrl: 'views/header.html'
+						'reference': {
+							templateUrl: 'views/reference.html'
+						},
+						'navbar': {
+							templateUrl: 'views/navbar.html'
+						},
+						'content': {
+							templateUrl: 'views/home.html',
+							controller: 'ctrlOne'
+						},
+						'footer': {
+							templateUrl: 'views/footer.html'
 						}
 					}
 				})
-				.state('app.flexiblebox', {
-					'content': {
-						templateUrl: 'views/flexible-box-layout.html'
+				.state('app.flexibleboxlayout',{
+					url: 'flexible-box-layout',
+					views: {
+						'reference': {
+							templateUrl: 'views/reference.html'
+						},
+						'content@': {
+							templateUrl: 'views/flexible-box-layout.html',
+							controller: 'demoCtrl'
+						}
 					}
 				});
 				$urlRouterProvider.otherwise('/');
-		}]);
+	}])
+
+	.controller('demoCtrl', ['$scope', function($scope){
+		$scope.msg = "Inside flexibleboxlayout";
+
+	}])
+	.controller('ctrlOne', ['$scope', function($scope){
+		$scope.msg = "Inside home";
+	}])
 
 
 })();

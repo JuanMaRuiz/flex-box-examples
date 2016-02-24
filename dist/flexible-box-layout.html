@@ -1,175 +1,118 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/reset.css"/>
-    <link rel="stylesheet" href="css/styles.css"/>
-    <title>Playing with Flex box</title>
+<section>
+    <article>
+    <header>
+        <h1>CSS FLEXIBLE BOX LAYOUT</h1>
+        <h2>Multicolumn layout</h2>
+    </header>
+    <p>
+    {{msg}}
+    
+    <div ui-view="reference"></div>
 
-    <!--[if lt IE 9]>
-    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
-    <![endif]-->
-</head>
-<body>
-<main class="wrapper">
-    <section>
-        <article>
+    </p>
+    </article>
+    <aside>
+        <nav>
+            <p>In this section you can find:
+            <ul class="content-submenu">
+                <li><a href="#column-width">Column width</a></li>
+                <li><a href="#column-count">Column count</a></li>
+                <li><a href="#column-gutters">Column gutters</a></li>
+                <li><a href="#column-rule">Column rule</a></li>
+                <li><a href="#column-span">Column span</a></li>
+            </ul>
+            </p>
+        </nav>
+    </aside>
+    <article id="column-width">
         <header>
-            <h1>CSS FLIEXIBLE BOX LAYOUT</h1>
-            <h2>Multicolumn layout</h2>
+            <h3>Column width</h3>
         </header>
-        <p>
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank">Using CSS flexible boxes - MDN</a></li>
-            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox - CSS Tricks</a></li>
-        </ul>
-
-        <blockquote class="is-error">
-            <p>Please, note that <b>Flex box layout</b> is not full supported. Visit <a href="http://caniuse.com/#feat=flexbox">caniuse</a> for more info about this css3 feature</p>
+        <p>In this example <code>column-width</code> have been set as 200px width.</p>
+        <p>The browser will fit as many as columns into the container as posible, using the specfied width as ideal width.</p>
+        <p>The specification says:
+        <blockquote class="is-warning">
+            describes the optimal column width. The actual column width may be wider (to fill the available space), or narrower (only if the available space is smaller than the specified column width). Specified values must be greater than 0.
         </blockquote>
         </p>
+        <ul class="example column-width">
+            <li><a href="#" class="tag">ipsum</a></li>
+            <li><a href="#" class="tag">dolor</a></li>
+            <li><a href="#" class="tag">sit amet</a></li>
+            <li><a href="#" class="tag">consectetuer</a></li>
+            <li><a href="#" class="tag">adipiscing</a></li>
+            <li><a href="#" class="tag">elit</a></li>
+            <li><a href="#" class="tag">aliquam</a></li>
+            <li><a href="#" class="tag">tincidunt</a></li>
+            <li><a href="#" class="tag">mauris</a></li>
+            <li><a href="#" class="tag">eu risu</a></li>
+            <li><a href="#" class="tag">vestibulum</a></li>
+            <li><a href="#" class="tag">auctor</a></li>
+            <li><a href="#" class="tag">dapibus neque</a></li>
+            <li><a href="#" class="tag">vulputate</a></li>
+            <li><a href="#" class="tag">turpis</a></li>
+            <li><a href="#" class="tag">duis</a></li>
+            <li><a href="#" class="tag">ornare</a></li>
+            <li><a href="#" class="tag">lacus</a></li>
+            <li><a href="#" class="tag">magna</a></li>
+            <li><a href="#" class="tag">vitae</a></li>
+            <li><a href="#" class="tag">tincidunt</a></li>
+            <li><a href="#" class="tag">leo</a></li>
+            <li><a href="#" class="tag">elementum</a></li>
+            <li><a href="#" class="tag">sed posuere</a></li>
+            <li><a href="#" class="tag">metus</a></li>
+            <li><a href="#" class="tag">pellentesque</a></li>
+            <li><a href="#" class="tag">mattis</a></li>
+        </ul>
     </article>
-        <aside>
-            <nav>
-                <p>In this section you can find:
-                <ul class="content-submenu">
-                    <li><a href="#column-width">Column width</a></li>
-                    <li><a href="#column-count">Column count</a></li>
-                    <li><a href="#column-gutters">Column gutters</a></li>
-                    <li><a href="#column-rule">Column rule</a></li>
-                    <li><a href="#column-span">Column span</a></li>
-                </ul>
-                </p>
-            </nav>
-        </aside>
-        <article id="column-width">
-            <header>
-                <h3>Column width</h3>
-            </header>
-            <p>In this example <code>column-width</code> have been set as 200px width.</p>
-            <p>The browser will fit as many as columns into the container as posible, using the specfied width as ideal width.</p>
-            <p>The specification says:
-            <blockquote class="is-warning">
-                describes the optimal column width. The actual column width may be wider (to fill the available space), or narrower (only if the available space is smaller than the specified column width). Specified values must be greater than 0.
-            </blockquote>
-            </p>
-            <ul class="example column-width">
-                <li><a href="#" class="tag">ipsum</a></li>
-                <li><a href="#" class="tag">dolor</a></li>
-                <li><a href="#" class="tag">sit amet</a></li>
-                <li><a href="#" class="tag">consectetuer</a></li>
-                <li><a href="#" class="tag">adipiscing</a></li>
-                <li><a href="#" class="tag">elit</a></li>
-                <li><a href="#" class="tag">aliquam</a></li>
-                <li><a href="#" class="tag">tincidunt</a></li>
-                <li><a href="#" class="tag">mauris</a></li>
-                <li><a href="#" class="tag">eu risu</a></li>
-                <li><a href="#" class="tag">vestibulum</a></li>
-                <li><a href="#" class="tag">auctor</a></li>
-                <li><a href="#" class="tag">dapibus neque</a></li>
-                <li><a href="#" class="tag">vulputate</a></li>
-                <li><a href="#" class="tag">turpis</a></li>
-                <li><a href="#" class="tag">duis</a></li>
-                <li><a href="#" class="tag">ornare</a></li>
-                <li><a href="#" class="tag">lacus</a></li>
-                <li><a href="#" class="tag">magna</a></li>
-                <li><a href="#" class="tag">vitae</a></li>
-                <li><a href="#" class="tag">tincidunt</a></li>
-                <li><a href="#" class="tag">leo</a></li>
-                <li><a href="#" class="tag">elementum</a></li>
-                <li><a href="#" class="tag">sed posuere</a></li>
-                <li><a href="#" class="tag">metus</a></li>
-                <li><a href="#" class="tag">pellentesque</a></li>
-                <li><a href="#" class="tag">mattis</a></li>
-            </ul>
-        </article>
-        <article id="column-count">
-            <header>
-                <h3>Column count</h3>
-            </header>
-            <p>If you specify how many columns you want then the browser decide how wide the should be. In this example
-                <code>column-count</code> is setted as 3.</p>
-            <p>The specification says:
-            <blockquote class="is-warning">
-                describes the optimal number of columns into which the content of the element will be flowed. Values must be greater than 0. If both ‘column-width’ and ‘column-count’ have non-auto values, the integer value describes the maximum number of columns.
-            </blockquote>
-            </p>
-            <ul class="example column-count">
-                <li><a href="#" class="tag">ipsum</a></li>
-                <li><a href="#" class="tag">dolor</a></li>
-                <li><a href="#" class="tag">sit amet</a></li>
-                <li><a href="#" class="tag">consectetuer</a></li>
-                <li><a href="#" class="tag">adipiscing</a></li>
-                <li><a href="#" class="tag">elit</a></li>
-                <li><a href="#" class="tag">aliquam</a></li>
-                <li><a href="#" class="tag">tincidunt</a></li>
-                <li><a href="#" class="tag">mauris</a></li>
-                <li><a href="#" class="tag">eu risu</a></li>
-                <li><a href="#" class="tag">vestibulum</a></li>
-                <li><a href="#" class="tag">auctor</a></li>
-                <li><a href="#" class="tag">dapibus neque</a></li>
-                <li><a href="#" class="tag">vulputate</a></li>
-                <li><a href="#" class="tag">turpis</a></li>
-                <li><a href="#" class="tag">duis</a></li>
-                <li><a href="#" class="tag">ornare</a></li>
-                <li><a href="#" class="tag">lacus</a></li>
-                <li><a href="#" class="tag">magna</a></li>
-                <li><a href="#" class="tag">vitae</a></li>
-                <li><a href="#" class="tag">tincidunt</a></li>
-                <li><a href="#" class="tag">leo</a></li>
-                <li><a href="#" class="tag">elementum</a></li>
-                <li><a href="#" class="tag">sed posuere</a></li>
-                <li><a href="#" class="tag">metus</a></li>
-                <li><a href="#" class="tag">pellentesque</a></li>
-                <li><a href="#" class="tag">mattis</a></li>
-            </ul>
-        </article>
-        <section id="column-gutters">
-            <header>
-                <h3>Controlling gutters</h3>
-            </header>
-            <p>You can control gutters using <code>column-gap</code>. The default value is <code>1em</code>. You can set as <code>0</code> but never a negative value.</p>
-            <p>In the example below <code>column-count: 2</code> and <code>column-gap: 6em</code>.</p>
-            <div class="example column-gap">
-                <div>
-                    <h4>div#1</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
-                        Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
-                        vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
-                        justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
-                        malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
-                        pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.
-                    </p>
-                </div>
-                <div>
-                    <h4>div#2</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
-                        Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
-                        vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
-                        justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
-                        malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
-                        pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
-                </div>
-                <div>
-                    <h4>div#3</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
-                        Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
-                        vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
-                        justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
-                        malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
-                        pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
-                </div>
-            </div>
-        </section>
-        <article  id="column-rule">
-            <header>
-                <h3>Column rule</h3>
-            </header>
-            <p>This property allow you to style your columns with some styles (not very much and not very cool). The properties you can set are: <code>column-rule-style</code>
-                <code>column-rule-width</code> <code>column-rule-color</code>.</p>
-            <p>This properties behave in the same way as <code>border-style</code> <code>border-width</code> <code>border-color</code>.</p>
-        </article>
-        <div class="example column-rule">
+    <article id="column-count">
+        <header>
+            <h3>Column count</h3>
+        </header>
+        <p>If you specify how many columns you want then the browser decide how wide the should be. In this example
+            <code>column-count</code> is setted as 3.</p>
+        <p>The specification says:
+        <blockquote class="is-warning">
+            describes the optimal number of columns into which the content of the element will be flowed. Values must be greater than 0. If both ‘column-width’ and ‘column-count’ have non-auto values, the integer value describes the maximum number of columns.
+        </blockquote>
+        </p>
+        <ul class="example column-count">
+            <li><a href="#" class="tag">ipsum</a></li>
+            <li><a href="#" class="tag">dolor</a></li>
+            <li><a href="#" class="tag">sit amet</a></li>
+            <li><a href="#" class="tag">consectetuer</a></li>
+            <li><a href="#" class="tag">adipiscing</a></li>
+            <li><a href="#" class="tag">elit</a></li>
+            <li><a href="#" class="tag">aliquam</a></li>
+            <li><a href="#" class="tag">tincidunt</a></li>
+            <li><a href="#" class="tag">mauris</a></li>
+            <li><a href="#" class="tag">eu risu</a></li>
+            <li><a href="#" class="tag">vestibulum</a></li>
+            <li><a href="#" class="tag">auctor</a></li>
+            <li><a href="#" class="tag">dapibus neque</a></li>
+            <li><a href="#" class="tag">vulputate</a></li>
+            <li><a href="#" class="tag">turpis</a></li>
+            <li><a href="#" class="tag">duis</a></li>
+            <li><a href="#" class="tag">ornare</a></li>
+            <li><a href="#" class="tag">lacus</a></li>
+            <li><a href="#" class="tag">magna</a></li>
+            <li><a href="#" class="tag">vitae</a></li>
+            <li><a href="#" class="tag">tincidunt</a></li>
+            <li><a href="#" class="tag">leo</a></li>
+            <li><a href="#" class="tag">elementum</a></li>
+            <li><a href="#" class="tag">sed posuere</a></li>
+            <li><a href="#" class="tag">metus</a></li>
+            <li><a href="#" class="tag">pellentesque</a></li>
+            <li><a href="#" class="tag">mattis</a></li>
+        </ul>
+    </article>
+    <section id="column-gutters">
+        <header>
+            <h3>Controlling gutters</h3>
+        </header>
+        <p>You can control gutters using <code>column-gap</code>. The default value is <code>1em</code>. You can set as <code>0</code> but never a negative value.</p>
+        <p>In the example below <code>column-count: 2</code> and <code>column-gap: 6em</code>.</p>
+        <div class="example column-gap">
             <div>
                 <h4>div#1</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
@@ -199,60 +142,94 @@
                     pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
             </div>
         </div>
-        <article  id="column-span">
-            <header>
-                <h3>Column span</h3>
-            </header>
-            <p>If you want an element to span all columns you can give it the property <code>column-span</code>. This property can take only two values: <code>all</code> and <code>none</code>.</p>
-            <p>In the example bellow we've put together <code>column-count</code> and <code>column-span</code> to show how this property work.</p>
-            <div class="example column-count">
-
-                <h4 class="column-span">Title with <code>column-span</code></h4>
-
-                <div>
-                    <h4>div#2</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
-                        Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
-                        vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
-                        justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
-                        malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
-                        pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
-                </div>
-                <div>
-                    <h4>div#3</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
-                        Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
-                        vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
-                        justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
-                        malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
-                        pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <header>
-                <h3>Column breaks</h3>
-            </header>
-            <p>You can control how columns breaks with this property.</p>
-            <p>For example, if you want avoid breaks inside paragraphs and before blockquotes you can do this:</p>
-            <p>
-            <blockquote class="is-code">
-                <pre><code>
-                    .col-wrapper p {
-                    break-inside: avoid;
-                    }
-                    .col-wrapper bockquote {
-                    break-before: avoid;
-                    }
-                </code></pre>
-            </blockquote>
-            <small>Remember use browser prefixes.</small>
-            </p>
-        </article>
-        <a href="/flexible-box-layout.html">CSS Flexible box layout -></a>
     </section>
-</main>
+    <article  id="column-rule">
+        <header>
+            <h3>Column rule</h3>
+        </header>
+        <p>This property allow you to style your columns with some styles (not very much and not very cool). The properties you can set are: <code>column-rule-style</code>
+            <code>column-rule-width</code> <code>column-rule-color</code>.</p>
+        <p>This properties behave in the same way as <code>border-style</code> <code>border-width</code> <code>border-color</code>.</p>
+    </article>
+    <div class="example column-rule">
+        <div>
+            <h4>div#1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
+                Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
+                vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
+                justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
+                malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
+                pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.
+            </p>
+        </div>
+        <div>
+            <h4>div#2</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
+                Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
+                vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
+                justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
+                malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
+                pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
+        </div>
+        <div>
+            <h4>div#3</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
+                Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
+                vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
+                justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
+                malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
+                pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
+        </div>
+    </div>
+    <article  id="column-span">
+        <header>
+            <h3>Column span</h3>
+        </header>
+        <p>If you want an element to span all columns you can give it the property <code>column-span</code>. This property can take only two values: <code>all</code> and <code>none</code>.</p>
+        <p>In the example bellow we've put together <code>column-count</code> and <code>column-span</code> to show how this property work.</p>
+        <div class="example column-count">
 
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-</body>
-</html>
+            <h4 class="column-span">Title with <code>column-span</code></h4>
+
+            <div>
+                <h4>div#2</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
+                    Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
+                    vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
+                    justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
+                    malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
+                    pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
+            </div>
+            <div>
+                <h4>div#3</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus quis nisi vitae consectetur.
+                    Curabitur cursus rutrum orci, sed dignissim purus faucibus in. Nulla convallis, sapien lacinia
+                    vehicula aliquam, sapien erat interdum purus, vitae suscipit mi sem sit amet est. Vivamus varius
+                    justo metus, vel molestie dui sodales rutrum. Donec lorem est, efficitur ut nunc sed, viverra
+                    malesuada dui. Pellentesque eget feugiat odio. Donec nunc lectus, maximus vitae magna dignissim,
+                    pellentesque aliquam odio. Vestibulum consectetur vitae arcu et sagittis.</p>
+            </div>
+        </div>
+    </article>
+    <article>
+        <header>
+            <h3>Column breaks</h3>
+        </header>
+        <p>You can control how columns breaks with this property.</p>
+        <p>For example, if you want avoid breaks inside paragraphs and before blockquotes you can do this:</p>
+        <p>
+        <blockquote class="is-code">
+            <pre><code>
+                .col-wrapper p {
+                break-inside: avoid;
+                }
+                .col-wrapper bockquote {
+                break-before: avoid;
+                }
+            </code></pre>
+        </blockquote>
+        <small>Remember use browser prefixes.</small>
+        </p>
+    </article>
+    <a href="/flexible-box-layout.html">CSS Flexible box layout -></a>
+</section>
