@@ -10,9 +10,10 @@
 
 /* Layout */
 @import 'layout/header';
-@import 'layout/menu';
+@import 'layout/navbar';
 @import 'layout/submenu';
 @import 'layout/sidebar';
+@import 'layout/content';
 
 
 @import 'templates/blog';
@@ -26,10 +27,12 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
     margin: 0 auto;
     background-color: $white;
-    padding: 20px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    
 }
 
 header {
@@ -69,43 +72,6 @@ code {
     -moz-border-radius: 4px;
     border-radius: 4px;
     line-height: 1.1em;
-}
-
-.content-submenu {
-    color: $white;
-    text-align: center;
-    background-color: #3E4651;
-    -moz-display: flex;
-    -webkit-display: flex;
-    display: flex;
-    -moz-justify-content: space-around;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    transition-property: background-color, color;
-    transition-duration: .5s;
-    transition-timing-function: ease-out;
-}
-.content-submenu a {
-    color: $white;
-    text-decoration: none;
-    padding: 15px;
-    cursor: pointer;
-    display: inline-block;
-    border-bottom: none;
-}
-
-.content-submenu li:hover a {
-    color: #3E4651;
-    /*transition-property: background-color, color;
-    transition-duration: 1s;
-    transition-timing-function: ease-out;*/
-}
-.content-submenu li:hover {
-    color: #3E4651;
-    background-color: $white;
-    transition-property: background-color, color;
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
 }
 
 /* $Examples */

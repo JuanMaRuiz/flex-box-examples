@@ -1,0 +1,41 @@
+.nav-bar {
+    color: $white;
+    text-align: center;
+    background-color: #3E4651;
+    // -moz-display: flex;
+    // -webkit-display: flex;
+    // display: flex;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    transition-property: background-color, color;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    width: 20%;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        padding: 15px;
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: none;
+    }
+
+    li {
+        &:hover {
+            color: #3E4651;
+            background-color: $white;
+            transition-property: background-color, color;
+            transition-duration: 1s;
+            transition-timing-function: ease-out;
+
+            a {
+                color: #3E4651;
+                /*transition-property: background-color, color;
+                transition-duration: 1s;
+                transition-timing-function: ease-out;*/
+            }
+        }
+    }
+}

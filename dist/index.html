@@ -11,8 +11,12 @@
 </head>
 <body ng-app="flexbox">
 <main class="wrapper">
-    <div ui-view="reference"></div>
-    <div ui-view="content"></div>
+    <div ui-view="navbar"></div>
+
+    <section class="content">
+	    <div ui-view="reference"></div>
+	    <div ui-view="content"></div>
+    </section>
 </main>
 
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>

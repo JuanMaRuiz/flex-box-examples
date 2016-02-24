@@ -120,6 +120,18 @@
                     flatten: true, // expand: true and flatten: true to copy file without folders 
                 }
             },
+            postcss: {
+                options: {
+                    processors: [
+                        require('autoprefixer')(),
+                        require('cssnext')(),
+                        require('precss')()
+                    ]
+                }, dist: {
+                    src: 'dist/css/styles.css',
+                    dest: 'dist/css/styles.css'
+                }
+            },
             cssmin: {
                 target: {
                     files: [{
@@ -162,6 +174,7 @@
             'clean',
             'jshint',
             'sass',
+            'postcss',
             'cssmin',
             'ngAnnotate',
             'concat',
